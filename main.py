@@ -125,7 +125,7 @@ async def ga(email):
 
     try:
     	r=get_proxs()
-    	ru = requests.post(url,headers=hel,data=data,proxies=r).json()
+    	ru = requests.post(url,headers=hel,data=data).json()
     	print(ru)
     	st=(ru["message"])
     	#print(st)
@@ -138,4 +138,4 @@ async def ga(email):
     except:
     		re={'status':'Erorr','email':f'{em}','dev':'@Marko_Bots'}
     		return re
-uvicorn.run(app,host='0.0.0.0',port=8080)
+#uvicorn.run(app,host='0.0.0.0',port=8080)
